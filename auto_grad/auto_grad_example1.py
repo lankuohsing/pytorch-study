@@ -14,7 +14,10 @@ Q = 3*a**3 - b**2
 # In[]
 external_grad = torch.tensor([1., 1.])
 Q.backward(gradient=external_grad)
-#Q.sum().backward()#can replace the code above
+#Q.sum().backward()#This can replace the code above
+# In[]
+print(a.grad)
+print(b.grad)
 # In[]
 # check if collected gradients are correct
 # check if collected gradients are correct
